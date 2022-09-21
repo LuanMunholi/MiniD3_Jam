@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8818826664135127540}
   - component: {fileID: 5000900599271254560}
   - component: {fileID: 1800033814770294131}
+  - component: {fileID: 3774522390800332594}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -62,12 +63,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4778433636396652904}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: efcf27f7c712ca046839ce7e739f181e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
   rb: {fileID: 8818826664135127540}
 --- !u!212 &1800033814770294131
 SpriteRenderer:
@@ -121,3 +121,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3774522390800332594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4778433636396652904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a60ed6d824ebb742b9c90cdf72db956, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5

@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 119379936454713782}
   - component: {fileID: 8818826664135127540}
-  - component: {fileID: 5000900599271254560}
   - component: {fileID: 1800033814770294131}
-  - component: {fileID: 3774522390800332594}
+  - component: {fileID: 3369085154971154164}
+  - component: {fileID: 1552627409407254744}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -56,19 +56,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &5000900599271254560
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4778433636396652904}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efcf27f7c712ca046839ce7e739f181e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 8818826664135127540}
 --- !u!212 &1800033814770294131
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -121,7 +108,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3774522390800332594
+--- !u!114 &3369085154971154164
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -130,7 +117,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 4778433636396652904}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a60ed6d824ebb742b9c90cdf72db956, type: 3}
+  m_Script: {fileID: 11500000, guid: 4df05a517cca8874792ceaece58b0151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  rb: {fileID: 8818826664135127540}
+--- !u!114 &1552627409407254744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4778433636396652904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efcf27f7c712ca046839ce7e739f181e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 8818826664135127540}

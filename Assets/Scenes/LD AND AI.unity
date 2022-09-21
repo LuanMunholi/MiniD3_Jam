@@ -426,6 +426,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -1559390781, guid: eac8000918189e1488dd661827f63051, type: 3}
+    - target: {fileID: 1800033814770294131, guid: a44f36959ae63d24eaca657a8aa3609d, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4778433636396652904, guid: a44f36959ae63d24eaca657a8aa3609d, type: 3}
       propertyPath: m_Name
       value: Player
@@ -564,6 +568,31 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1570696270 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4778433636396652904, guid: a44f36959ae63d24eaca657a8aa3609d, type: 3}
+  m_PrefabInstance: {fileID: 1316048406}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1570696271
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1570696270}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d8ebdd30803d23f44b13ecbe3a9711c6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1641953433
 GameObject:
   m_ObjectHideFlags: 0

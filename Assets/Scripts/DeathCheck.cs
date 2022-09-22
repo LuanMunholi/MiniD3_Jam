@@ -16,7 +16,7 @@ public class DeathCheck : MonoBehaviour
     void Update()
     {
         if (player.isDead == true){
-            SceneManager.LoadScene("Menu");
+            SceneManager.LoadScene("Win");
         }
         player.isDead = false;
     }

@@ -7,4 +7,11 @@ public class SceneTransition : MonoBehaviour
     {
         SceneManager.LoadScene("Arena");
     }
+
+    public void QuitGame(){
+
+        Application.Quit();
+
+    }
+
 }

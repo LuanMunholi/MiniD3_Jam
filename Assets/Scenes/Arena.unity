@@ -637,6 +637,10 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4778433636396652904, guid: a44f36959ae63d24eaca657a8aa3609d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4778433636396652904, guid: a44f36959ae63d24eaca657a8aa3609d, type: 3}
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
@@ -828,10 +832,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 071edf8dac003b54da13f9349fc19a99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 1389639014}
   maxSpeed: 2
   acceleration: 50
   deacceleration: 100
   currentSpeed: 0
+  player: {fileID: 1389639023}
+  idleUp: PlayerIdleUp
+  idleDown: PlayerIdleDown
+  idleLeft: PlayerIdleLeft
+  idleRight: PlayeridleRight
+  PlayerWalkingUp: PlayerWalkingUp
+  PlayerWalkingDown: PlayerWalkingDown
+  PlayerWalkingLeft: PlayerWalkingLeft
+  PlayerWalkingRight: PlayerWalkingRight
+  PlayerHitUp: PlayerHitUp
+  PlayerHitDown: PlayerHitDown
+  PlayerHitLeft: PlayerHitLeft
+  PlayerHitRight: PlayerHitRight
+  PlayerAttackUp: PlayerAttackUp
+  PlayerAttackDown: PlayerAttackDown
+  PlayerAttackLeft: PlayerAttackLeft
+  PlayerAttackRight: PlayerAttackRight
 --- !u!70 &1389639021
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -848,6 +870,17 @@ CapsuleCollider2D:
   m_Offset: {x: -0.0012439012, y: -0.0214249}
   m_Size: {x: 0.11273118, y: 0.11925637}
   m_Direction: 0
+--- !u!114 &1389639023 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5000900599271254560, guid: a44f36959ae63d24eaca657a8aa3609d, type: 3}
+  m_PrefabInstance: {fileID: 1389639010}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1389639012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efcf27f7c712ca046839ce7e739f181e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1434929236
 GameObject:
   m_ObjectHideFlags: 0
@@ -922,10 +955,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 071edf8dac003b54da13f9349fc19a99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 1570696271}
   maxSpeed: 2
   acceleration: 50
   deacceleration: 100
   currentSpeed: 0
+  player: {fileID: 1570696281}
+  idleUp: PlayerIdleUp
+  idleDown: PlayerIdleDown
+  idleLeft: PlayerIdleLeft
+  idleRight: PlayeridleRight
+  PlayerWalkingUp: PlayerWalkingUp
+  PlayerWalkingDown: PlayerWalkingDown
+  PlayerWalkingLeft: PlayerWalkingLeft
+  PlayerWalkingRight: PlayerWalkingRight
+  PlayerHitUp: PlayerHitUp
+  PlayerHitDown: PlayerHitDown
+  PlayerHitLeft: PlayerHitLeft
+  PlayerHitRight: PlayerHitRight
+  PlayerAttackUp: PlayerAttackUp
+  PlayerAttackDown: PlayerAttackDown
+  PlayerAttackLeft: PlayerAttackLeft
+  PlayerAttackRight: PlayerAttackRight
 --- !u!114 &1570696276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1057,6 +1108,17 @@ CapsuleCollider2D:
   m_Offset: {x: -0.0040752157, y: -0.013762716}
   m_Size: {x: 0.08664704, y: 0.1345809}
   m_Direction: 0
+--- !u!114 &1570696281 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5000900599271254560, guid: a44f36959ae63d24eaca657a8aa3609d, type: 3}
+  m_PrefabInstance: {fileID: 1316048406}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1570696270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efcf27f7c712ca046839ce7e739f181e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1631256887
 GameObject:
   m_ObjectHideFlags: 0
@@ -1385,7 +1447,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2094920382
 MonoBehaviour:
   m_ObjectHideFlags: 0

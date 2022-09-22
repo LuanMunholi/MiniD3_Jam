@@ -12,11 +12,22 @@ public class Player : MonoBehaviour
     private KnockbackArea knockbackArea;
 
     [SerializeField] private InputActionReference movement, knockback;
+    [SerializeField] private float animationDelay = 0.3f;
+
+    public string memoryLastState;
+    public string currentState;
+
+    public bool animationBlock = false;
 
     private void Awake(){
 
+        animator = GetComponent<Animator>();
         knockbackArea = GetComponentInChildren<KnockbackArea>();
         agentMover = GetComponent<AgentMover>();
+
+        animator.Play("PlayerIdleDown");
+        memoryLastState = "PlayerIdleDown";
+        currentState = "PlayerIdleDown";
 
     }
 
@@ -44,15 +55,18 @@ public class Player : MonoBehaviour
 
         agentMover.MovementInput = movementInput;
         
-        if (movementInput.x > 0 && movementInput.y < movementInput.x) animator.SetTrigger("WalkRight");
-        if (movementInput.y > 0 && movementInput.x < movementInput.y) animator.SetTrigger("WalkUp");
-        if (movementInput.x < 0 && movementInput.y > movementInput.x) animator.SetTrigger("WalkLeft");
-        if (movementInput.y < 0 && movementInput.x > movementInput.y) animator.SetTrigger("WalkDown");
+        StartCoroutine(AnimationDelay());
 
         movementInput = Vector2.zero;
 
     }
 
+    private IEnumerator AnimationDelay (){
+        
+        yield return new WaitForSeconds(animationDelay);
+        animationBlock = false;
+
+    }
 
 }
 

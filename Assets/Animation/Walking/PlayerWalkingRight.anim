@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PlayerWalkingrRight
+  m_Name: PlayerWalkingRight
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -27,7 +27,7 @@ AnimationClip:
       value: {fileID: 2011107448, guid: bb09caf7a2944b947979a77da0ec19cb, type: 3}
     - time: 0.25
       value: {fileID: -130315060, guid: bb09caf7a2944b947979a77da0ec19cb, type: 3}
-    - time: 0.35
+    - time: 0.33333334
       value: {fileID: 128538322, guid: bb09caf7a2944b947979a77da0ec19cb, type: 3}
     - time: 0.41666666
       value: {fileID: -1189317453, guid: bb09caf7a2944b947979a77da0ec19cb, type: 3}

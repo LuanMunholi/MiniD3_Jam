@@ -12,12 +12,12 @@ public class Player : MonoBehaviour
     private KnockbackArea knockbackArea;
 
     [SerializeField] private InputActionReference movement, knockback;
-    [SerializeField] private float animationDelay = 0.3f;
 
     public string memoryLastState;
     public string currentState;
 
     public bool animationBlock = false;
+    public bool attackBlocked = false;
 
     private void Awake(){
 
@@ -45,7 +45,12 @@ public class Player : MonoBehaviour
 
     private void PerformKnockback(InputAction.CallbackContext obj){
 
+        movementInput = movement.action.ReadValue<Vector2>();
+
+        knockbackArea.MovementInput = movementInput;
         knockbackArea.Attack();
+
+        movementInput = Vector2.zero;
 
     }
 
@@ -54,23 +59,10 @@ public class Player : MonoBehaviour
         movementInput = movement.action.ReadValue<Vector2>();
 
         agentMover.MovementInput = movementInput;
-        
-        StartCoroutine(AnimationDelay());
+        agentMover.PlayAnimation();
 
         movementInput = Vector2.zero;
 
     }
 
-    private IEnumerator AnimationDelay (){
-        
-        yield return new WaitForSeconds(animationDelay);
-        animationBlock = false;
-
-    }
-
 }
-
-
-
-   
-

@@ -8,9 +8,13 @@ public class KnockbackArea : MonoBehaviour
 {
 
     [SerializeField] private InputActionReference knockback;
-    [SerializeField] private float delayAttack = 0.3f;
+
+    private AgentMover agentMover;
+    private Player player;
     private Knockback Knockback;
-    
+    public Animator animator;
+
+    public Vector2 MovementInput{ get; set;}
     public bool IsAttacking{get; private set;}
 
     public Transform circleOrigin;
@@ -18,7 +22,9 @@ public class KnockbackArea : MonoBehaviour
 
     private void Awake(){
 
-        Knockback = GetComponent<Knockback>();
+        Knockback = GetComponentInParent<Knockback>();
+        agentMover = GetComponentInParent<AgentMover>();
+        player = GetComponentInParent<Player>();
 
     }
 
@@ -28,23 +34,12 @@ public class KnockbackArea : MonoBehaviour
 
     }    
 
-    private bool attackBlocked;
-    public Animator animator;
-
     public void Attack(){
 
-        if (attackBlocked)
+        if (player.attackBlocked)
             return;
 
-        animator.SetTrigger("AttackDown");
-        attackBlocked = true;
-        StartCoroutine(DelayAttack());
-    }
-    
-    private IEnumerator DelayAttack (){
-        
-        yield return new WaitForSeconds(delayAttack);
-        attackBlocked = false;
+        agentMover.PlayAttackAnimation();
 
     }
 

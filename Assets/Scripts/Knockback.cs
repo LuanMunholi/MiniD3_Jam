@@ -7,7 +7,7 @@ using UnityEngine.Events;
 public class Knockback : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D body;
-    [SerializeField] private float strength = 16, delay = 0.15f;
+    [SerializeField] private float strength = 6, delay = 0.15f;
 
     public UnityEvent OnBegin, OnDone;
 

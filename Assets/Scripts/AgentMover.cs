@@ -140,36 +140,24 @@ public class AgentMover : MonoBehaviour
         if (MovementInput.y > 0 && MovementInput.x < MovementInput.y){
 
             player.currentState = PlayerAttackUp;
-            Debug.Log(player.animationBlock);
-            Debug.Log(player.memoryLastState);
-            Debug.Log(player.currentState);
 
         }
 
         if (MovementInput.x > 0 &&MovementInput.y < MovementInput.x){
         
             player.currentState = PlayerAttackRight;
-            Debug.Log(player.animationBlock);
-            Debug.Log(player.memoryLastState);
-            Debug.Log(player.currentState);
 
         }
 
         if (MovementInput.y < 0 && MovementInput.x >MovementInput.y){
             
             player.currentState = PlayerAttackDown;
-            Debug.Log(player.animationBlock);
-            Debug.Log(player.memoryLastState);
-            Debug.Log(player.currentState);
 
         }
 
         if (MovementInput.x < 0 &&MovementInput.y > MovementInput.x){
             
             player.currentState = PlayerAttackLeft;
-            Debug.Log(player.animationBlock);
-            Debug.Log(player.memoryLastState);
-            Debug.Log(player.currentState);
 
         }
 
@@ -285,36 +273,24 @@ public class AgentMover : MonoBehaviour
         if (MovementInput.y > 0 && MovementInput.x < MovementInput.y){
 
             player.currentState = PlayerWalkingUp;
-            Debug.Log(player.animationBlock);
-            Debug.Log(player.memoryLastState);
-            Debug.Log(player.currentState);
 
         }
 
         if (MovementInput.x > 0 &&MovementInput.y < MovementInput.x){
         
             player.currentState = PlayerWalkingRight;
-            Debug.Log(player.animationBlock);
-            Debug.Log(player.memoryLastState);
-            Debug.Log(player.currentState);
 
         }
 
         if (MovementInput.y < 0 && MovementInput.x >MovementInput.y){
             
             player.currentState = PlayerWalkingDown;
-            Debug.Log(player.animationBlock);
-            Debug.Log(player.memoryLastState);
-            Debug.Log(player.currentState);
 
         }
 
         if (MovementInput.x < 0 &&MovementInput.y > MovementInput.x){
             
             player.currentState = PlayerWalkingLeft;
-            Debug.Log(player.animationBlock);
-            Debug.Log(player.memoryLastState);
-            Debug.Log(player.currentState);
 
         }
 
@@ -339,7 +315,6 @@ public class AgentMover : MonoBehaviour
 
     void ChangeAnimationState (string newState){
 
-        Debug.Log(newState);
         animator.Play(newState);
         player.animationBlock = true;
 

@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
 
     public bool animationBlock = false;
     public bool attackBlocked = false;
+    public bool isDead = false;
 
     private void Awake(){
 
@@ -55,6 +56,8 @@ public class Player : MonoBehaviour
     }
 
     private void Update(){
+
+        Debug.Log(isDead);
 
         movementInput = movement.action.ReadValue<Vector2>();
 

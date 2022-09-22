@@ -1,5 +1,5 @@
 {
-    "name": "Player Input Manager",
+    "name": "Arrow Player",
     "maps": [
         {
             "name": "ArrowPlayer",
@@ -28,7 +28,7 @@
                 {
                     "name": "",
                     "id": "05da9bd4-5542-4840-bdf7-88c0da75d326",
-                    "path": "<Mouse>/leftButton",
+                    "path": "<Mouse>/rightButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

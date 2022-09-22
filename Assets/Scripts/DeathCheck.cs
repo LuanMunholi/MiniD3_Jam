@@ -3,21 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class DeathZone : MonoBehaviour
+public class DeathCheck : MonoBehaviour
 {
     private Player player;
-
-    private void Awake(){
-
+    
+    void Awake(){
+        
         player = GetComponentInChildren<Player>();
 
     }
 
-    void OnTriggerEnter2D(Collider2D other) {
-        if(other.CompareTag("GroundCheck"))
-        {
-            player.isDead = true;
+    void Update()
+    {
+        if (player.isDead == true){
+            SceneManager.LoadScene("Menu");
         }
-        
+        player.isDead = false;
     }
 }
